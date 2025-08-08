@@ -83,9 +83,8 @@ Some CAs provide a tool to generate the correct chain for you
 
 
 Verifying the chain:
-
 You can use OpenSSL to verify your certificate chain:
-openssl verify -CAfile chain.pem server_certificate.pem
+        openssl verify -CAfile chain.pem server_certificate.pem
 
 Replace chain.pem with your certificate chain file and server_certificate.pem with your server certificate file
 
@@ -99,15 +98,18 @@ The exact process might vary slightly depending on your certificate authority an
 
 Paste the PEM-formatted certificate:
 For the certificate body and chain, you can directly paste the PEM-formatted text into the respective fields. It should look something like this:
-Copy-----BEGIN CERTIFICATE-----
-(Your certificate content here)
------END CERTIFICATE-----
+
+        Copy-----BEGIN CERTIFICATE-----
+        (Your certificate content here)
+        -----END CERTIFICATE-----
 
 Paste the private key:
 For the private key, paste the PEM-formatted private key. It should look like:
-Copy-----BEGIN PRIVATE KEY-----
-(Your private key content here)
------END PRIVATE KEY-----
+
+        Copy-----BEGIN PRIVATE KEY-----
+        (Your private key content here)
+        -----END PRIVATE KEY-----
+
 Note: Keep your private key secure and never share it publicly.
 Review and import:
 Double-check all the information and click "Import" or "Review and import".
