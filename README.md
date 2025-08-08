@@ -22,8 +22,6 @@ b) Certificate private key : If the key is encrypted use :
         openssl rsa -in encrypted_private_key.pem -out decrypted_private_key.pem
 
 c) Certificate chain (if applicable) : (certificate+intermediate+root)
-        
-
 Adding a certificate chain is an important step when importing a certificate into AWS Certificate Manager (ACM). The certificate chain (also known as the intermediate certificate) links your SSL/TLS certificate to a trusted root certificate authority. Here's how to construct and add the certificate chain:
 
 Understanding the certificate chain:
@@ -36,14 +34,17 @@ Constructing the chain:
 
 
 Format of the chain:
-The chain should be in PEM format, with each certificate starting with "-----BEGIN CERTIFICATE-----" and ending with "-----END CERTIFICATE-----".
+The chain should be in PEM format, with each certificate starting with **"-----BEGIN CERTIFICATE-----"** and ending with **"-----END CERTIFICATE-----"**.
+
 How to construct the chain:
+
 a. Open a text editor
+
 b. Copy and paste the certificates in order:
 
-Your server certificate (if not already in a separate field)
-Followed by intermediate certificate(s)
-Root certificate (optional) or
+        Your server certificate (if not already in a separate field)
+        Followed by intermediate certificate(s)
+        Root certificate (optional) or
 
 Use Cat command simply:
 
@@ -112,13 +113,13 @@ For the private key, paste the PEM-formatted private key. It should look like:
         -----END PRIVATE KEY-----
 
 Note: Keep your private key secure and never share it publicly.
+
 Review and import:
 Double-check all the information and click "Import" or "Review and import".
 Update associated resources:
 If you're using this certificate with other AWS services (like CloudFront or ELB), you may need to update those resources to use the new certificate ARN.
 
 Important notes:
-
 Verify using : https://www.sslshopper.com/certificate-decoder.html 
 Ensure you have the new certificate ready before the current one expires.
 The new certificate should have the same domain names as the old one.
