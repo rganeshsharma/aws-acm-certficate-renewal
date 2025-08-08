@@ -58,7 +58,7 @@ c. Ensure there are no extra spaces or lines between certificates
 
 
         Example of a certificate chain:
-        Copy-----BEGIN CERTIFICATE-----
+        -----BEGIN CERTIFICATE-----
         (Your server certificate)
         -----END CERTIFICATE-----
         -----BEGIN CERTIFICATE-----
@@ -101,14 +101,14 @@ The exact process might vary slightly depending on your certificate authority an
 Paste the PEM-formatted certificate:
 For the certificate body and chain, you can directly paste the PEM-formatted text into the respective fields. It should look something like this:
 
-        Copy-----BEGIN CERTIFICATE-----
+        -----BEGIN CERTIFICATE-----
         (Your certificate content here)
         -----END CERTIFICATE-----
 
 Paste the private key:
 For the private key, paste the PEM-formatted private key. It should look like:
 
-        Copy-----BEGIN PRIVATE KEY-----
+        -----BEGIN PRIVATE KEY-----
         (Your private key content here)
         -----END PRIVATE KEY-----
 
