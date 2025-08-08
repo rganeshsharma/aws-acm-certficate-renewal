@@ -17,8 +17,8 @@ Import the new certificate:
 Click on "Import a certificate" (or select the expiring certificate and choose "Reimport" if that option is available).
 You'll need to provide three pieces of information in PEM format:
 a) Certificate body : Use certificate.crt
-
 b) Certificate private key : If the key is encrypted use :
+        
         openssl rsa -in encrypted_private_key.pem -out decrypted_private_key.pem
 
 c) Certificate chain (if applicable) : (certificate+intermediate+root)
@@ -46,6 +46,7 @@ Followed by intermediate certificate(s)
 Root certificate (optional) or
 
 Use Cat command simply:
+
         cat server.crt intermediate.crt root.crt > certificate_chain.pem or 
         cat intermediate.crt root.crt > certificate_chain.pem or
         cat server.crt intermediate.crt > certificate_chain.pem 
